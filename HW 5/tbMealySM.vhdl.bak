@@ -1,0 +1,35 @@
+ENTITY tbMealySM IS
+END tbMealySM;
+
+ARCHITECTURE one OF tbMealySM IS
+	-- DECLARATIONS
+	COMPONENT mealySM
+		PORT(clk,x,POR: IN BIT; z: OUT bit);
+	END COMPONENT;
+	FOR ALL : mealySM USE ENTITY work.mealySM(BEHAVIORAL);
+
+	SIGNAL xs : BIT_VECTOR(1 TO 40) := ('0','0','0','0','0','1','0','1','0','0','1','1','1','1','0','0','1','0','0','0','0','1','1','1','1','1','0','1','0','1','0','0','1','0','0','0','0','0','0','0');
+	SIGNAL clk : BIT :='1';
+	SIGNAL x,z : BIT;
+	SIGNAL POR : BIT := '0';
+	BEGIN
+		m0 : mealySM PORT MAP(clk,x,POR,z);
+		-- DECLARE CLOCK PROCESS
+		PROCESS
+		BEGIN
+		clk <= NOT clk AFTER 5 ns;
+		END PROCESS;
+		-- DECLARE STIMULUS PROCESS
+		PROCESS
+		BEGIN
+		WAIT FOR 1 ns;
+		FOR i IN 1 to 40 LOOP
+			x <= xs(i);
+			WAIT FOR 10 ns;
+		END LOOP;
+		WAIT FOR 10 ns;
+		POR <= '1';
+		WAIT;
+		END PROCESS;
+	
+END one;

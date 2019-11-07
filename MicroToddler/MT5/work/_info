@@ -1,0 +1,91 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dU:/ECE3561VLog/MicroToddler/MT5
+Ebusdr
+w1573096938
+Z1 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z2 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z3 8U:/ECE3561VLog/MicroToddler/MT5/BUSDR_16_WIDE.vhdl
+Z4 FU:/ECE3561VLog/MicroToddler/MT5/BUSDR_16_WIDE.vhdl
+l0
+L4
+V;zCkz[<eE;I[CNoSk=@]o2
+!s100 CAQ6Q6TQ_RL7B^>^^30k;2
+Z5 OV;C;10.5b;63
+32
+!s110 1573096999
+!i10b 1
+!s108 1573096998.000000
+Z6 !s90 -reportprogress|300|-work|work|U:/ECE3561VLog/MicroToddler/MT5/BUSDR_16_WIDE.vhdl|
+!s107 U:/ECE3561VLog/MicroToddler/MT5/BUSDR_16_WIDE.vhdl|
+!i113 1
+Z7 o-work work
+Z8 tExplicit 1 CvgOpt 0
+Abehavioral
+w1573096951
+R1
+R2
+DEx4 work 5 busdr 0 22 2l462mFY=S8=5HYBezToO2
+l15
+L13
+V[NLeHLb>:F<a:fK=CS_C70
+!s100 RSC`FS:Poj_]gNVSa^l`P1
+R5
+32
+!s110 1573096995
+!i10b 1
+!s108 1573096995.000000
+!s90 -reportprogress|300|-work|work|U:/ECE3561VLog/MicroToddler/MT5/BUSDR_1_WIDE.vhdl|
+!s107 U:/ECE3561VLog/MicroToddler/MT5/BUSDR_1_WIDE.vhdl|
+!i113 1
+R7
+R8
+FU:/ECE3561VLog/MicroToddler/MT5/BUSDR_1_WIDE.vhdl
+8U:/ECE3561VLog/MicroToddler/MT5/BUSDR_1_WIDE.vhdl
+Ebusdr_16_wide
+Z9 w1573097077
+R1
+R2
+R0
+R3
+R4
+l0
+L4
+VFl;oI<<>3PL@AJiRaMD?F2
+!s100 8A@@VQSV?bfoi<k]TDJ=i1
+R5
+32
+Z10 !s110 1573097082
+!i10b 1
+Z11 !s108 1573097082.000000
+R6
+Z12 !s107 U:/ECE3561VLog/MicroToddler/MT5/BUSDR_16_WIDE.vhdl|
+!i113 1
+R7
+R8
+Abehavioral
+R1
+R2
+DEx4 work 13 busdr_16_wide 0 22 Fl;oI<<>3PL@AJiRaMD?F2
+l15
+L13
+Vd@f0__0b;L9fLh[nmWkNI0
+!s100 d`H;NP`>7`l=h;a168L813
+R5
+32
+R10
+!i10b 1
+R11
+R6
+R12
+!i113 1
+R7
+R8

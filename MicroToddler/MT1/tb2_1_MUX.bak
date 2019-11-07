@@ -1,0 +1,27 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_arith.all;
+ENTITY tb2_1_MUX IS
+END tb2_1_MUX;
+
+ARCHITECTURE one OF tb2_1_MUX IS
+	COMPONENT 2_1_MUX
+		PORT(a,b,sel: IN std_logic; z: OUT std_logic);
+	END COMPONENT;
+
+SIGNAL a,b,sel,z   :   std_logic := 0;
+SIGNAL s1 : std_logic_vector(1 downto 0);
+
+SIGNAL clk : BIT :='1';
+BEGIN
+	mux1 : 2_1_MUX PORT MAP(a,b,sel,z)
+	
+	PROCESS
+	BEGIN
+	clk <= NOT clk AFTER 10 ns;
+	END PROCESS;
+
+PROCESS(clk)
+s1  <= s1 +'1';
+a <= s1(0);
+b <= s1(1);

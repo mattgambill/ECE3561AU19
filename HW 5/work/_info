@@ -1,0 +1,81 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dU:/ECE3561VLog/HW 5
+Emealysm
+Z1 w1570398707
+R0
+Z2 8U:/ECE3561VLog/HW 5/mealySM.vhdl
+Z3 FU:/ECE3561VLog/HW 5/mealySM.vhdl
+l0
+L1
+V9e0U1D?^zWHD=jCUXg1AB0
+!s100 SbbSnZQI0E<nz;<=zb@<d3
+Z4 OV;C;10.5b;63
+32
+Z5 !s110 1570398712
+!i10b 1
+Z6 !s108 1570398712.000000
+Z7 !s90 -reportprogress|300|-work|work|U:/ECE3561VLog/HW 5/mealySM.vhdl|
+Z8 !s107 U:/ECE3561VLog/HW 5/mealySM.vhdl|
+!i113 1
+Z9 o-work work
+Z10 tExplicit 1 CvgOpt 0
+Abehavioral
+Z11 DEx4 work 7 mealysm 0 22 9e0U1D?^zWHD=jCUXg1AB0
+l8
+L5
+VLB@7Ch2Cd[H^0nPIIkIYT1
+!s100 OJ`:HM?7`]zN:Vo[28lZH2
+R4
+32
+R5
+!i10b 1
+R6
+R7
+R8
+!i113 1
+R9
+R10
+Etbmealysm
+Z12 w1570397136
+R0
+Z13 8U:/ECE3561VLog/HW 5/tbMealySM.vhdl
+Z14 FU:/ECE3561VLog/HW 5/tbMealySM.vhdl
+l0
+L1
+Vg^ZmZ<c_bL:_Teh4Z_X6T1
+!s100 zL[_@4TiOi[Dije3a]AkO1
+R4
+32
+Z15 !s110 1570398229
+!i10b 1
+Z16 !s108 1570398229.000000
+Z17 !s90 -reportprogress|300|-work|work|U:/ECE3561VLog/HW 5/tbMealySM.vhdl|
+Z18 !s107 U:/ECE3561VLog/HW 5/tbMealySM.vhdl|
+!i113 1
+R9
+R10
+Aone
+R11
+DEx4 work 9 tbmealysm 0 22 g^ZmZ<c_bL:_Teh4Z_X6T1
+l15
+L4
+VI`BK1Pd6>h<3oVi6D=haS3
+!s100 >gIaIiSU1R0OQgNoK5o@o1
+R4
+32
+R15
+!i10b 1
+R16
+R17
+R18
+!i113 1
+R9
+R10

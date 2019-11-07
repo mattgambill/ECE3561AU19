@@ -1,0 +1,12 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_arith.all;
+-- input is 4 bits, input(0) =  a,input(1) = b, input(2) = sel
+ENTITY two_one_MUX_four_wide IS
+PORT(input : std_logic_vector(3 downto 0); output  : std_logic_vector(3 downto 0) );
+END two_one_MUX;
+
+ARCHITECTURE BEHAVIORAL OF two_one_MUX IS
+BEGIN
+output(0) <= ((not(input(2)) and input(0)) or  (input(2) and input(1)));
+END BEHAVIORAL;

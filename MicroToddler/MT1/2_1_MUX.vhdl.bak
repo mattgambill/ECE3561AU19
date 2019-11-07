@@ -1,0 +1,15 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_arith.all;
+
+ENTITY 21MUX IS
+PORT(a : IN std_logic;
+	b : IN std_logic;
+	sel : IN std_logic;
+	z : OUT std_logic);
+END 21MUX;
+
+ARCHITECTURE BEHAVIORAL OF 21MUX IS
+BEGIN
+z <= ((not(sel) and a) or  (sel and b));
+END BEHAVIORAL;
