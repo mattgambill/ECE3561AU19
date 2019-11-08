@@ -11,7 +11,7 @@ BEGIN
 Process
 BEGIN
 Wait UNTIL clk='1' AND clk'event;
-IF en='1' THEN
+IF(en='1') THEN
 q<=d;
 END IF;
 END PROCESS;

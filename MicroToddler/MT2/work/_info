@@ -7,33 +7,33 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dU:/ECE3561VLog/MicroToddler/MT2
+dU:/ECE3561VLog/MicroToddler/MT2
 Enor_16_wide
-Z1 w1573091903
-Z2 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
-Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
-Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
-R0
-Z5 8U:/ECE3561VLog/MicroToddler/MT2/nor_16_wide.vhdl
-Z6 FU:/ECE3561VLog/MicroToddler/MT2/nor_16_wide.vhdl
+Z0 w1573179567
+Z1 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z4 dC:/Users/Matt/Desktop/MicroToddler/MT2
+Z5 8C:/Users/Matt/Desktop/MicroToddler/MT2/nor_16_wide.vhdl
+Z6 FC:/Users/Matt/Desktop/MicroToddler/MT2/nor_16_wide.vhdl
 l0
 L5
 V6n=@QMV>3QJgP4eC31zWM0
 !s100 5R6_Xh<M_Qm]33LhGF=k[3
 Z7 OV;C;10.5b;63
 32
-Z8 !s110 1573091906
+Z8 !s110 1573179586
 !i10b 1
-Z9 !s108 1573091906.000000
-Z10 !s90 -reportprogress|300|-work|work|U:/ECE3561VLog/MicroToddler/MT2/nor_16_wide.vhdl|
-Z11 !s107 U:/ECE3561VLog/MicroToddler/MT2/nor_16_wide.vhdl|
+Z9 !s108 1573179586.000000
+Z10 !s90 -reportprogress|300|-work|work|C:/Users/Matt/Desktop/MicroToddler/MT2/nor_16_wide.vhdl|
+Z11 !s107 C:/Users/Matt/Desktop/MicroToddler/MT2/nor_16_wide.vhdl|
 !i113 1
 Z12 o-work work
 Z13 tExplicit 1 CvgOpt 0
 Abehavioral
+R1
 R2
 R3
-R4
 DEx4 work 11 nor_16_wide 0 22 6n=@QMV>3QJgP4eC31zWM0
 l11
 L10
@@ -46,6 +46,47 @@ R8
 R9
 R10
 R11
+!i113 1
+R12
+R13
+Etbnor_16_wide
+Z14 w1573179625
+R1
+R2
+R3
+R4
+Z15 8C:/Users/Matt/Desktop/MicroToddler/MT2/tbnor_16_wide.vhdl
+Z16 FC:/Users/Matt/Desktop/MicroToddler/MT2/tbnor_16_wide.vhdl
+l0
+L4
+VnlD[=bXn]IDZ4]lLVdW7A0
+!s100 @_XO]GdTHPMe8gV]@Gk4z3
+R7
+32
+Z17 !s110 1573179640
+!i10b 1
+Z18 !s108 1573179640.000000
+Z19 !s90 -reportprogress|300|-work|work|C:/Users/Matt/Desktop/MicroToddler/MT2/tbnor_16_wide.vhdl|
+Z20 !s107 C:/Users/Matt/Desktop/MicroToddler/MT2/tbnor_16_wide.vhdl|
+!i113 1
+R12
+R13
+Aone
+R1
+R2
+R3
+Z21 DEx4 work 13 tbnor_16_wide 0 22 nlD[=bXn]IDZ4]lLVdW7A0
+l18
+L7
+V6VF=VlKkB_m6d?>zB6kgD2
+!s100 <T<goa7Mmn`d4bV>=9CB93
+R7
+32
+R17
+!i10b 1
+R18
+R19
+R20
 !i113 1
 R12
 R13
