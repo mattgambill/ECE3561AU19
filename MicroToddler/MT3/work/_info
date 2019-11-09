@@ -8,3 +8,86 @@ z2
 !i10f 100
 cModel Technology
 dU:/ECE3561VLog/MicroToddler/MT3
+Eaddsub
+Z0 w1573271819
+Z1 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z4 dC:/Users/Matt/Documents/GitHub/ECE3561AU19/MicroToddler/MT3
+Z5 8C:/Users/Matt/Documents/GitHub/ECE3561AU19/MicroToddler/MT3/addSub.vhdl
+Z6 FC:/Users/Matt/Documents/GitHub/ECE3561AU19/MicroToddler/MT3/addSub.vhdl
+l0
+L11
+VlZTR?[<WJNQnIioAGEBM:1
+!s100 SI9fOG_?oQJKC4>hkP>>@3
+Z7 OV;C;10.5b;63
+33
+Z8 !s110 1573271889
+!i10b 1
+Z9 !s108 1573271889.000000
+Z10 !s90 -reportprogress|300|-work|work|C:/Users/Matt/Documents/GitHub/ECE3561AU19/MicroToddler/MT3/addSub.vhdl|
+Z11 !s107 C:/Users/Matt/Documents/GitHub/ECE3561AU19/MicroToddler/MT3/addSub.vhdl|
+!i113 1
+Z12 o-work work
+Z13 tExplicit 1 NoCoverage 1 CvgOpt 0
+Artl
+R1
+R2
+R3
+Z14 DEx4 work 6 addsub 0 22 lZTR?[<WJNQnIioAGEBM:1
+l24
+L21
+V>fGEFOPol5zHA]OzXbbbn1
+!s100 0e0DSKKOP7o]fb@PCG89z2
+R7
+33
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Etbaddsub
+Z15 w1573271901
+R1
+R2
+R3
+R4
+Z16 8C:/Users/Matt/Documents/GitHub/ECE3561AU19/MicroToddler/MT3/tbaddSub.vhdl
+Z17 FC:/Users/Matt/Documents/GitHub/ECE3561AU19/MicroToddler/MT3/tbaddSub.vhdl
+l0
+L11
+VjC44@P@U7;c0WXme94dal3
+!s100 z31G^]kVlX`dHTV[NAjJ11
+R7
+33
+Z18 !s110 1573271906
+!i10b 1
+Z19 !s108 1573271906.000000
+Z20 !s90 -reportprogress|300|-work|work|C:/Users/Matt/Documents/GitHub/ECE3561AU19/MicroToddler/MT3/tbaddSub.vhdl|
+Z21 !s107 C:/Users/Matt/Documents/GitHub/ECE3561AU19/MicroToddler/MT3/tbaddSub.vhdl|
+!i113 1
+R12
+R13
+Aone
+R14
+R1
+R2
+R3
+Z22 DEx4 work 8 tbaddsub 0 22 jC44@P@U7;c0WXme94dal3
+l18
+L14
+Vj8WW6LU`@CZfP=<66W5Bj1
+!s100 4X0=<h]FM1Ud<_OjbNa^k0
+R7
+33
+R18
+!i10b 1
+R19
+R20
+R21
+!i113 1
+R12
+R13
