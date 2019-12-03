@@ -1,5 +1,5 @@
 Analysis & Synthesis report for MT1Q
-Fri Nov 08 23:28:26 2019
+Tue Dec 03 17:53:14 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -42,14 +42,14 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Fri Nov 08 23:28:26 2019       ;
+; Analysis & Synthesis Status     ; Successful - Tue Dec 03 17:53:14 2019       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; MT1Q                                        ;
-; Top-level Entity Name           ; addSub                                      ;
+; Top-level Entity Name           ; regSet                                      ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 0                                           ;
-; Total pins                      ; 51                                          ;
+; Total registers                 ; 128                                         ;
+; Total pins                      ; 42                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -68,7 +68,7 @@ refer to the applicable agreement for further details.
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
-; Top-level entity name                                                           ; addSub             ; MT1Q               ;
+; Top-level entity name                                                           ; regSet             ; MT1Q               ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
@@ -165,13 +165,18 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                   ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                            ; Library ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------+---------+
-; MT3/addSub.vhdl                  ; yes             ; User VHDL File  ; C:/Users/Matt/Documents/GitHub/ECE3561AU19/MicroToddler/MT3/addSub.vhdl ;         ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                  ;
++----------------------------------------------------+-----------------+-----------------+------------------------------------------------------+---------+
+; File Name with User-Entered Path                   ; Used in Netlist ; File Type       ; File Name with Absolute Path                         ; Library ;
++----------------------------------------------------+-----------------+-----------------+------------------------------------------------------+---------+
+; ../../../../Desktop/MT registers/regSet.vhdl       ; yes             ; User VHDL File  ; C:/Users/Matt/Desktop/MT registers/regSet.vhdl       ;         ;
+; ../../../../Desktop/MT registers/mux2_to_1x16.vhdl ; yes             ; User VHDL File  ; C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl ;         ;
+; ../../../../Desktop/MT registers/reg16.vhdl        ; yes             ; User VHDL File  ; C:/Users/Matt/Desktop/MT registers/reg16.vhdl        ;         ;
+; ../../../../Desktop/MT registers/pri3to8.vhdl      ; yes             ; User VHDL File  ; C:/Users/Matt/Desktop/MT registers/pri3to8.vhdl      ;         ;
+; ../../../../Desktop/MT registers/busdr.vhdl        ; yes             ; User VHDL File  ; C:/Users/Matt/Desktop/MT registers/busdr.vhdl        ;         ;
+; ../../../../Desktop/MT registers/regLine.vhdl      ; yes             ; User VHDL File  ; C:/Users/Matt/Desktop/MT registers/regLine.vhdl      ;         ;
++----------------------------------------------------+-----------------+-----------------+------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------------+
@@ -179,35 +184,61 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------------+
 ; Resource                                    ; Usage           ;
 +---------------------------------------------+-----------------+
-; Estimate of Logic utilization (ALMs needed) ; 27              ;
+; Estimate of Logic utilization (ALMs needed) ; 189             ;
 ;                                             ;                 ;
-; Combinational ALUT usage for logic          ; 43              ;
+; Combinational ALUT usage for logic          ; 282             ;
 ;     -- 7 input functions                    ; 0               ;
-;     -- 6 input functions                    ; 10              ;
-;     -- 5 input functions                    ; 7               ;
-;     -- 4 input functions                    ; 1               ;
-;     -- <=3 input functions                  ; 25              ;
+;     -- 6 input functions                    ; 96              ;
+;     -- 5 input functions                    ; 160             ;
+;     -- 4 input functions                    ; 24              ;
+;     -- <=3 input functions                  ; 2               ;
 ;                                             ;                 ;
-; Dedicated logic registers                   ; 0               ;
+; Dedicated logic registers                   ; 128             ;
 ;                                             ;                 ;
-; I/O pins                                    ; 51              ;
+; I/O pins                                    ; 42              ;
 ;                                             ;                 ;
 ; Total DSP Blocks                            ; 0               ;
 ;                                             ;                 ;
-; Maximum fan-out node                        ; operation~input ;
-; Maximum fan-out                             ; 21              ;
-; Total fan-out                               ; 229             ;
-; Average fan-out                             ; 1.58            ;
+; Maximum fan-out node                        ; Aregno[2]~input ;
+; Maximum fan-out                             ; 172             ;
+; Total fan-out                               ; 1870            ;
+; Average fan-out                             ; 3.56            ;
 +---------------------------------------------+-----------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                    ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; |addSub                    ; 43 (43)             ; 0 (0)                     ; 0                 ; 0          ; 51   ; 0            ; |addSub             ; addSub      ; work         ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                            ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------+--------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                        ; Entity Name  ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------+--------------+--------------+
+; |regSet                    ; 282 (0)             ; 128 (0)                   ; 0                 ; 0          ; 42   ; 0            ; |regSet                                    ; regSet       ; work         ;
+;    |regLine:regLine0|      ; 147 (3)             ; 16 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |regSet|regLine:regLine0                   ; regLine      ; work         ;
+;       |busdr:Abusdr|       ; 64 (64)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |regSet|regLine:regLine0|busdr:Abusdr      ; busdr        ; work         ;
+;       |busdr:Bbusdr|       ; 64 (64)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |regSet|regLine:regLine0|busdr:Bbusdr      ; busdr        ; work         ;
+;       |mux2_to_1x16:mux0|  ; 16 (16)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |regSet|regLine:regLine0|mux2_to_1x16:mux0 ; mux2_to_1x16 ; work         ;
+;       |reg16:reg0|         ; 0 (0)               ; 16 (16)                   ; 0                 ; 0          ; 0    ; 0            ; |regSet|regLine:regLine0|reg16:reg0        ; reg16        ; work         ;
+;    |regLine:regLine1|      ; 19 (3)              ; 16 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |regSet|regLine:regLine1                   ; regLine      ; work         ;
+;       |mux2_to_1x16:mux0|  ; 16 (16)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |regSet|regLine:regLine1|mux2_to_1x16:mux0 ; mux2_to_1x16 ; work         ;
+;       |reg16:reg0|         ; 0 (0)               ; 16 (16)                   ; 0                 ; 0          ; 0    ; 0            ; |regSet|regLine:regLine1|reg16:reg0        ; reg16        ; work         ;
+;    |regLine:regLine2|      ; 20 (4)              ; 16 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |regSet|regLine:regLine2                   ; regLine      ; work         ;
+;       |mux2_to_1x16:mux0|  ; 16 (16)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |regSet|regLine:regLine2|mux2_to_1x16:mux0 ; mux2_to_1x16 ; work         ;
+;       |reg16:reg0|         ; 0 (0)               ; 16 (16)                   ; 0                 ; 0          ; 0    ; 0            ; |regSet|regLine:regLine2|reg16:reg0        ; reg16        ; work         ;
+;    |regLine:regLine3|      ; 20 (4)              ; 16 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |regSet|regLine:regLine3                   ; regLine      ; work         ;
+;       |mux2_to_1x16:mux0|  ; 16 (16)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |regSet|regLine:regLine3|mux2_to_1x16:mux0 ; mux2_to_1x16 ; work         ;
+;       |reg16:reg0|         ; 0 (0)               ; 16 (16)                   ; 0                 ; 0          ; 0    ; 0            ; |regSet|regLine:regLine3|reg16:reg0        ; reg16        ; work         ;
+;    |regLine:regLine4|      ; 18 (2)              ; 16 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |regSet|regLine:regLine4                   ; regLine      ; work         ;
+;       |mux2_to_1x16:mux0|  ; 16 (16)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |regSet|regLine:regLine4|mux2_to_1x16:mux0 ; mux2_to_1x16 ; work         ;
+;       |reg16:reg0|         ; 0 (0)               ; 16 (16)                   ; 0                 ; 0          ; 0    ; 0            ; |regSet|regLine:regLine4|reg16:reg0        ; reg16        ; work         ;
+;    |regLine:regLine5|      ; 18 (2)              ; 16 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |regSet|regLine:regLine5                   ; regLine      ; work         ;
+;       |mux2_to_1x16:mux0|  ; 16 (16)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |regSet|regLine:regLine5|mux2_to_1x16:mux0 ; mux2_to_1x16 ; work         ;
+;       |reg16:reg0|         ; 0 (0)               ; 16 (16)                   ; 0                 ; 0          ; 0    ; 0            ; |regSet|regLine:regLine5|reg16:reg0        ; reg16        ; work         ;
+;    |regLine:regLine6|      ; 20 (4)              ; 16 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |regSet|regLine:regLine6                   ; regLine      ; work         ;
+;       |mux2_to_1x16:mux0|  ; 16 (16)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |regSet|regLine:regLine6|mux2_to_1x16:mux0 ; mux2_to_1x16 ; work         ;
+;       |reg16:reg0|         ; 0 (0)               ; 16 (16)                   ; 0                 ; 0          ; 0    ; 0            ; |regSet|regLine:regLine6|reg16:reg0        ; reg16        ; work         ;
+;    |regLine:regLine7|      ; 20 (4)              ; 16 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |regSet|regLine:regLine7                   ; regLine      ; work         ;
+;       |mux2_to_1x16:mux0|  ; 16 (16)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |regSet|regLine:regLine7|mux2_to_1x16:mux0 ; mux2_to_1x16 ; work         ;
+;       |reg16:reg0|         ; 0 (0)               ; 16 (16)                   ; 0                 ; 0          ; 0    ; 0            ; |regSet|regLine:regLine7|reg16:reg0        ; reg16        ; work         ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------+--------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -216,7 +247,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 0     ;
+; Total registers                              ; 128   ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -231,17 +262,19 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_lcell_comb     ; 43                          ;
-;     normal            ; 43                          ;
-;         2 data inputs ; 14                          ;
-;         3 data inputs ; 11                          ;
-;         4 data inputs ; 1                           ;
-;         5 data inputs ; 7                           ;
-;         6 data inputs ; 10                          ;
-; boundary_port         ; 51                          ;
+; arriav_ff             ; 128                         ;
+;     plain             ; 128                         ;
+; arriav_io_obuf        ; 32                          ;
+; arriav_lcell_comb     ; 282                         ;
+;     normal            ; 282                         ;
+;         2 data inputs ; 2                           ;
+;         4 data inputs ; 24                          ;
+;         5 data inputs ; 160                         ;
+;         6 data inputs ; 96                          ;
+; boundary_port         ; 42                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 7.00                        ;
-; Average LUT depth     ; 4.86                        ;
+; Max LUT depth         ; 3.00                        ;
+; Average LUT depth     ; 1.67                        ;
 +-----------------------+-----------------------------+
 
 
@@ -260,25 +293,175 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Fri Nov 08 23:28:16 2019
+    Info: Processing started: Tue Dec 03 17:53:03 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MT1Q -c MT1Q
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
-Info (12021): Found 2 design units, including 1 entities, in source file mt3/addsub.vhdl
-    Info (12022): Found design unit 1: addSub-rtl File: C:/Users/Matt/Documents/GitHub/ECE3561AU19/MicroToddler/MT3/addSub.vhdl Line: 21
-    Info (12023): Found entity 1: addSub File: C:/Users/Matt/Documents/GitHub/ECE3561AU19/MicroToddler/MT3/addSub.vhdl Line: 11
-Info (12127): Elaborating entity "addSub" for the top level hierarchy
+Info (12021): Found 2 design units, including 1 entities, in source file /users/matt/desktop/mt registers/regset.vhdl
+    Info (12022): Found design unit 1: regSet-one File: C:/Users/Matt/Desktop/MT registers/regSet.vhdl Line: 11
+    Info (12023): Found entity 1: regSet File: C:/Users/Matt/Desktop/MT registers/regSet.vhdl Line: 3
+Info (12021): Found 2 design units, including 1 entities, in source file /users/matt/desktop/mt registers/mux2_to_1x16.vhdl
+    Info (12022): Found design unit 1: mux2_to_1x16-one File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 9
+    Info (12023): Found entity 1: mux2_to_1x16 File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 3
+Info (12021): Found 2 design units, including 1 entities, in source file /users/matt/desktop/mt registers/reg16.vhdl
+    Info (12022): Found design unit 1: reg16-one File: C:/Users/Matt/Desktop/MT registers/reg16.vhdl Line: 9
+    Info (12023): Found entity 1: reg16 File: C:/Users/Matt/Desktop/MT registers/reg16.vhdl Line: 3
+Info (12021): Found 2 design units, including 1 entities, in source file /users/matt/desktop/mt registers/pri3to8.vhdl
+    Info (12022): Found design unit 1: pri3to8-one File: C:/Users/Matt/Desktop/MT registers/pri3to8.vhdl Line: 8
+    Info (12023): Found entity 1: pri3to8 File: C:/Users/Matt/Desktop/MT registers/pri3to8.vhdl Line: 3
+Info (12021): Found 2 design units, including 1 entities, in source file /users/matt/desktop/mt registers/busdr.vhdl
+    Info (12022): Found design unit 1: busdr-one File: C:/Users/Matt/Desktop/MT registers/busdr.vhdl Line: 9
+    Info (12023): Found entity 1: busdr File: C:/Users/Matt/Desktop/MT registers/busdr.vhdl Line: 3
+Info (12021): Found 2 design units, including 1 entities, in source file /users/matt/desktop/mt registers/regline.vhdl
+    Info (12022): Found design unit 1: regLine-one File: C:/Users/Matt/Desktop/MT registers/regLine.vhdl Line: 10
+    Info (12023): Found entity 1: regLine File: C:/Users/Matt/Desktop/MT registers/regLine.vhdl Line: 3
+Info (12127): Elaborating entity "regSet" for the top level hierarchy
+Info (12128): Elaborating entity "regLine" for hierarchy "regLine:regLine0" File: C:/Users/Matt/Desktop/MT registers/regSet.vhdl Line: 32
+Info (12128): Elaborating entity "mux2_to_1x16" for hierarchy "regLine:regLine0|mux2_to_1x16:mux0" File: C:/Users/Matt/Desktop/MT registers/regLine.vhdl Line: 42
+Info (12128): Elaborating entity "reg16" for hierarchy "regLine:regLine0|reg16:reg0" File: C:/Users/Matt/Desktop/MT registers/regLine.vhdl Line: 45
+Info (12128): Elaborating entity "busdr" for hierarchy "regLine:regLine0|busdr:Abusdr" File: C:/Users/Matt/Desktop/MT registers/regLine.vhdl Line: 46
+Info (12128): Elaborating entity "pri3to8" for hierarchy "pri3to8:Aencoder" File: C:/Users/Matt/Desktop/MT registers/regSet.vhdl Line: 42
+Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
+    Warning (13049): Converted tri-state buffer "regLine:regLine7|mux2_to_1x16:mux0|muxout[0]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine7|mux2_to_1x16:mux0|muxout[1]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine7|mux2_to_1x16:mux0|muxout[2]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine7|mux2_to_1x16:mux0|muxout[3]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine7|mux2_to_1x16:mux0|muxout[4]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine7|mux2_to_1x16:mux0|muxout[5]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine7|mux2_to_1x16:mux0|muxout[6]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine7|mux2_to_1x16:mux0|muxout[7]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine7|mux2_to_1x16:mux0|muxout[8]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine7|mux2_to_1x16:mux0|muxout[9]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine7|mux2_to_1x16:mux0|muxout[10]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine7|mux2_to_1x16:mux0|muxout[11]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine7|mux2_to_1x16:mux0|muxout[12]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine7|mux2_to_1x16:mux0|muxout[13]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine7|mux2_to_1x16:mux0|muxout[14]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine7|mux2_to_1x16:mux0|muxout[15]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine6|mux2_to_1x16:mux0|muxout[0]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine6|mux2_to_1x16:mux0|muxout[1]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine6|mux2_to_1x16:mux0|muxout[2]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine6|mux2_to_1x16:mux0|muxout[3]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine6|mux2_to_1x16:mux0|muxout[4]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine6|mux2_to_1x16:mux0|muxout[5]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine6|mux2_to_1x16:mux0|muxout[6]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine6|mux2_to_1x16:mux0|muxout[7]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine6|mux2_to_1x16:mux0|muxout[8]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine6|mux2_to_1x16:mux0|muxout[9]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine6|mux2_to_1x16:mux0|muxout[10]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine6|mux2_to_1x16:mux0|muxout[11]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine6|mux2_to_1x16:mux0|muxout[12]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine6|mux2_to_1x16:mux0|muxout[13]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine6|mux2_to_1x16:mux0|muxout[14]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine6|mux2_to_1x16:mux0|muxout[15]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine5|mux2_to_1x16:mux0|muxout[0]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine5|mux2_to_1x16:mux0|muxout[1]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine5|mux2_to_1x16:mux0|muxout[2]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine5|mux2_to_1x16:mux0|muxout[3]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine5|mux2_to_1x16:mux0|muxout[4]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine5|mux2_to_1x16:mux0|muxout[5]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine5|mux2_to_1x16:mux0|muxout[6]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine5|mux2_to_1x16:mux0|muxout[7]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine5|mux2_to_1x16:mux0|muxout[8]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine5|mux2_to_1x16:mux0|muxout[9]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine5|mux2_to_1x16:mux0|muxout[10]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine5|mux2_to_1x16:mux0|muxout[11]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine5|mux2_to_1x16:mux0|muxout[12]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine5|mux2_to_1x16:mux0|muxout[13]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine5|mux2_to_1x16:mux0|muxout[14]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine5|mux2_to_1x16:mux0|muxout[15]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine4|mux2_to_1x16:mux0|muxout[0]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine4|mux2_to_1x16:mux0|muxout[1]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine4|mux2_to_1x16:mux0|muxout[2]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine4|mux2_to_1x16:mux0|muxout[3]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine4|mux2_to_1x16:mux0|muxout[4]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine4|mux2_to_1x16:mux0|muxout[5]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine4|mux2_to_1x16:mux0|muxout[6]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine4|mux2_to_1x16:mux0|muxout[7]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine4|mux2_to_1x16:mux0|muxout[8]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine4|mux2_to_1x16:mux0|muxout[9]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine4|mux2_to_1x16:mux0|muxout[10]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine4|mux2_to_1x16:mux0|muxout[11]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine4|mux2_to_1x16:mux0|muxout[12]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine4|mux2_to_1x16:mux0|muxout[13]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine4|mux2_to_1x16:mux0|muxout[14]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine4|mux2_to_1x16:mux0|muxout[15]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine3|mux2_to_1x16:mux0|muxout[0]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine3|mux2_to_1x16:mux0|muxout[1]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine3|mux2_to_1x16:mux0|muxout[2]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine3|mux2_to_1x16:mux0|muxout[3]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine3|mux2_to_1x16:mux0|muxout[4]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine3|mux2_to_1x16:mux0|muxout[5]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine3|mux2_to_1x16:mux0|muxout[6]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine3|mux2_to_1x16:mux0|muxout[7]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine3|mux2_to_1x16:mux0|muxout[8]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine3|mux2_to_1x16:mux0|muxout[9]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine3|mux2_to_1x16:mux0|muxout[10]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine3|mux2_to_1x16:mux0|muxout[11]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine3|mux2_to_1x16:mux0|muxout[12]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine3|mux2_to_1x16:mux0|muxout[13]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine3|mux2_to_1x16:mux0|muxout[14]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine3|mux2_to_1x16:mux0|muxout[15]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine2|mux2_to_1x16:mux0|muxout[0]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine2|mux2_to_1x16:mux0|muxout[1]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine2|mux2_to_1x16:mux0|muxout[2]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine2|mux2_to_1x16:mux0|muxout[3]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine2|mux2_to_1x16:mux0|muxout[4]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine2|mux2_to_1x16:mux0|muxout[5]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine2|mux2_to_1x16:mux0|muxout[6]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine2|mux2_to_1x16:mux0|muxout[7]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine2|mux2_to_1x16:mux0|muxout[8]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine2|mux2_to_1x16:mux0|muxout[9]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine2|mux2_to_1x16:mux0|muxout[10]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine2|mux2_to_1x16:mux0|muxout[11]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine2|mux2_to_1x16:mux0|muxout[12]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine2|mux2_to_1x16:mux0|muxout[13]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine2|mux2_to_1x16:mux0|muxout[14]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine2|mux2_to_1x16:mux0|muxout[15]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine1|mux2_to_1x16:mux0|muxout[0]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine1|mux2_to_1x16:mux0|muxout[1]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine1|mux2_to_1x16:mux0|muxout[2]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine1|mux2_to_1x16:mux0|muxout[3]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine1|mux2_to_1x16:mux0|muxout[4]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine1|mux2_to_1x16:mux0|muxout[5]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine1|mux2_to_1x16:mux0|muxout[6]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine1|mux2_to_1x16:mux0|muxout[7]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine1|mux2_to_1x16:mux0|muxout[8]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine1|mux2_to_1x16:mux0|muxout[9]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine1|mux2_to_1x16:mux0|muxout[10]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine1|mux2_to_1x16:mux0|muxout[11]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine1|mux2_to_1x16:mux0|muxout[12]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine1|mux2_to_1x16:mux0|muxout[13]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine1|mux2_to_1x16:mux0|muxout[14]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine1|mux2_to_1x16:mux0|muxout[15]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine0|mux2_to_1x16:mux0|muxout[0]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine0|mux2_to_1x16:mux0|muxout[1]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine0|mux2_to_1x16:mux0|muxout[2]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine0|mux2_to_1x16:mux0|muxout[3]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine0|mux2_to_1x16:mux0|muxout[4]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine0|mux2_to_1x16:mux0|muxout[5]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine0|mux2_to_1x16:mux0|muxout[6]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine0|mux2_to_1x16:mux0|muxout[7]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine0|mux2_to_1x16:mux0|muxout[8]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine0|mux2_to_1x16:mux0|muxout[9]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine0|mux2_to_1x16:mux0|muxout[10]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine0|mux2_to_1x16:mux0|muxout[11]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine0|mux2_to_1x16:mux0|muxout[12]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine0|mux2_to_1x16:mux0|muxout[13]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine0|mux2_to_1x16:mux0|muxout[14]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
+    Warning (13049): Converted tri-state buffer "regLine:regLine0|mux2_to_1x16:mux0|muxout[15]" feeding internal logic into a wire File: C:/Users/Matt/Desktop/MT registers/mux2_to_1x16.vhdl Line: 6
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 94 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 33 input pins
-    Info (21059): Implemented 18 output pins
-    Info (21061): Implemented 43 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4864 megabytes
-    Info: Processing ended: Fri Nov 08 23:28:26 2019
-    Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:23
+Info (21057): Implemented 324 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 10 input pins
+    Info (21059): Implemented 0 output pins
+    Info (21060): Implemented 32 bidirectional pins
+    Info (21061): Implemented 282 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 130 warnings
+    Info: Peak virtual memory: 4868 megabytes
+    Info: Processing ended: Tue Dec 03 17:53:14 2019
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:24
 
 
